@@ -10,14 +10,17 @@ public class ToDoItem {
 	private String nombre;
 	private String comment;
 	private ItemState itemState;
+	private String stateString;
 	
 	public ToDoItem(String nombre) {
 		this.nombre=nombre;
 		this.itemState=new Pending();
+		this.stateString="Pending";
 	}
 	
-	public void changeState(ItemState state) {
+	public void changeState(ItemState state, String stateString) {
 		this.itemState=state;
+		this.stateString=stateString;
 	}
 	
 	public void start() {
@@ -53,6 +56,13 @@ public class ToDoItem {
 		itemState.addComment(this,comment);
 	}
 	
+	public String getStateString() {
+		return this.stateString;
+	}
+	
+	public String getComment() {
+		return this.comment;
+	}
 	
 
 }

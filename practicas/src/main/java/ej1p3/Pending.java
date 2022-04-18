@@ -4,12 +4,12 @@ public class Pending extends ItemState{
 
 	@Override
 	public void start(ToDoItem item) {
-		item.changeState(new InProgress());
+		item.changeState(new InProgress(),"InProgress");
 	}
 
 	@Override
 	protected void togglePause(ToDoItem item) {
-		throw new RuntimeException("La tarea no se puede finalizar por que no comenzo");
+		throw new RuntimeException("La tarea no se puede pausar por que no comenzo");
 		
 	}
 

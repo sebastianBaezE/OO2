@@ -1,7 +1,7 @@
 package ej1p3;
 
 public abstract class ItemState {
-		
+			
 	protected abstract void start(ToDoItem item);
 	
 	protected abstract void togglePause(ToDoItem item);

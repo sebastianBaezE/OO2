@@ -7,13 +7,13 @@ public class Paused extends ItemState {
 
 	@Override
 	protected void togglePause(ToDoItem item) {
-		item.changeState(new InProgress());
+		item.changeState(new InProgress(),"InProgress");
 		
 	}
 
 	@Override
 	protected void finish(ToDoItem item) {
-		item.changeState(new Finished());
+		item.changeState(new Finished(),"Finished");
 	}
 	
 	@Override
