@@ -9,7 +9,13 @@ public class Archivo extends FileSystem{
 	}
 	
 	
+	public Archivo archivoMasGrande() {
+		return this;
+	}
 	
+	public Archivo archivoMasNuevo() {
+		return this;
+	}
 	
 
 

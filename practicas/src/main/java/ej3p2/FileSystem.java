@@ -2,7 +2,7 @@ package ej3p2;
 
 import java.time.LocalDate;
 
-public class FileSystem {
+public abstract class FileSystem {
 	
 	protected String nombre;
 	protected LocalDate fecha_creacion;
@@ -23,5 +23,7 @@ public class FileSystem {
 		return this.tamano;
 	}
 	
+	public abstract Archivo archivoMasGrande();
+	public abstract Archivo archivoMasNuevo();
 	
 }

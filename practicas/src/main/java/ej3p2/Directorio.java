@@ -27,12 +27,12 @@ public class Directorio extends FileSystem {
 		this.hijos.add(elemento);
 	}
 	
-	public Archivo archivoMasGrande() {
-		return null;
-	}
+	public Archivo archivoMasGrande() {  
+		return null;      //hay que corregir
+	} 
 	
 	public Archivo archivoMasNuevo() {
-		return null;
+		return null;	//hay que corregir, como uso el Comparate?
 	}
 		
 }
