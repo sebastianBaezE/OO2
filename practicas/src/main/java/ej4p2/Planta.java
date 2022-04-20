@@ -46,8 +46,5 @@ public class Planta extends Empleado{
 		return 0;
 	}
 	
-	public double adicionalDuda() {
-		return super.adicionalDuda()+2000*antiguedad;
-	}
 
 }

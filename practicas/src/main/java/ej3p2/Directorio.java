@@ -3,11 +3,12 @@ package ej3p2;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class Directorio extends FileSystem {
 	
 	
-	private ArrayList<FileSystem> hijos;
+	private List<FileSystem> hijos;
 	
 
 	public Directorio(String nombre, LocalDate fecha_creacion) {
@@ -28,11 +29,14 @@ public class Directorio extends FileSystem {
 	}
 	
 	public Archivo archivoMasGrande() {  
-		return null;      //hay que corregir
+		return this.hijos.stream()
+				.map(hijo -> hijo.archivoMasGrande())
+				.max(Comparator.comparingInt(arch -> arch.tamanoTotalOcupado()))
+				.orElse(null);
 	} 
 	
 	public Archivo archivoMasNuevo() {
-		return null;	//hay que corregir, como uso el Comparate?
+    	return this.hijos.stream().map(hijo -> hijo.archivoMasNuevo()).max(Comparator.comparing(arch -> arch.getFecha())).orElse(null);
 	}
 		
 }

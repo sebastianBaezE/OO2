@@ -17,6 +17,10 @@ public class Archivo extends FileSystem{
 		return this;
 	}
 	
+	public LocalDate getFecha() {
+		return this.fecha_creacion;
+	}
+	
 
 
 	

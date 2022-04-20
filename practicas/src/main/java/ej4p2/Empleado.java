@@ -20,20 +20,4 @@ public abstract class Empleado {
 	public abstract int examenesRendidos();
 	
 
-	/*
-	*DUDAS*
-	
-	¿hay que aplicar el template method, como?
-	
-	¿intento de codigo compartido, esta bien?
-
-	*/
-	
-	public double adicionalDuda(){
-		if (this.estaCasado()) {
-			return 5000+(2000*this.getHijos());  //con empleado de Planta se hace return super.sueldo+2000*anos_Antiguedad
-		}
-		return 2000*this.getHijos()+2000*this.examenesRendidos();
-	}
-	
 }
